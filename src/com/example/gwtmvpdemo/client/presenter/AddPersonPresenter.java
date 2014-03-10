@@ -1,6 +1,7 @@
 package com.example.gwtmvpdemo.client.presenter;
 
 import com.example.gwtmvpdemo.client.StorageService;
+import com.example.gwtmvpdemo.client.event.PersonDetailsEvent;
 import com.example.gwtmvpdemo.client.event.ShowPersonsEvent;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -41,7 +42,7 @@ public class AddPersonPresenter implements Presenter {
 			
 			@Override
 			public void onClick(ClickEvent event) {
-				eventBus.fireEvent(new ShowPersonsEvent());
+				eventBus.fireEvent(new PersonDetailsEvent());
 			}
 		});
 	}
